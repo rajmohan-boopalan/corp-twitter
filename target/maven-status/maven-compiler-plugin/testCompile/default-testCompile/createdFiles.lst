@@ -1,0 +1,4 @@
+com\csc\devops\web\MyLoginTest.class
+com\csc\devops\ut\web\MyLoginStepDefinitions.class
+com\csc\devops\web\LoginTest.class
+com\csc\devops\ft\web\FunctionDefinition.class
