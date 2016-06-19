@@ -1,11 +1,7 @@
 package com.csc.devops.web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.csc.devops.model.Login;
+import main.java.com.csc.devops.dao.LoginDAO;
+import main.java.com.csc.devops.model.Login;
 
 @Controller
 public class LoginController {
@@ -15,8 +11,10 @@ public class LoginController {
 	public ModelAndView authenticate(Login login) {
 		
 		System.out.println("Entering into authenticate method()");
-		
-		if (login.getUserName().trim().equalsIgnoreCase("admin") && login.getPassword().equals("P@ssw0rd!")) {
+		LoginDAO loginDAO = new LoginDAO();
+		//if (login.getUserName().trim().equalsIgnoreCase("admin") && login.getPassword().equals("P@ssw0rd!")) {
+		if (loginDAO.authentiate(login.getUserName(), login.getPassword()))
+		{
 			ModelAndView homeView = new ModelAndView("home");
 			homeView.addObject("userName", login.getUserName().toUpperCase());
 			return homeView;	

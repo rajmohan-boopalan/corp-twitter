@@ -20,6 +20,14 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
+
 		<!-- Spring for dependency injection -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -135,7 +143,7 @@
 					<include>**/*.xml</include>
 				</includes>
 			</resource>
-			
+
 			<resource>
 				<directory>src/test/functional-test</directory>
 				<includes>
@@ -147,16 +155,16 @@
 		</resources>
 
 		<plugins>
-			
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
