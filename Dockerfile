@@ -1,3 +1,3 @@
-FROM jboss/wildfly
+FROM maven:3.3.3-jdk-7
 
-ADD corp-twitter-0.0.1-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/
+cmd ["mvn"]
